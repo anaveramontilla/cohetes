@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+body {
+    background: url("../img/background.jpg") repeat center/cover;
+}
+
+.titulo {
+    color: #ffc400;
+    font-size: 60px;
+    font-family: 'Bungee Shade', cursive;
+    animation-name: titulo;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+.form1 {
+    animation: formulario;
+    animation-duration: 1s;
+}
+
+/*Quitar flechas campo número*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input {
+    font-weight: 700 !important;
+    font-size: 20px !important;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+label {
+    color: white;
+    font-weight: 700;
+}
+
+#aceptar {
+    animation: formulario2;
+    animation-duration: 1s;
+}
+
+#aceptar:hover {
+    cursor: pointer;
+}
+
+#crear:hover {
+    cursor: pointer;
+}
+
+#habilitado {
+    margin: 20px 0;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#empezar:hover {
+    cursor: pointer;
+}
+
+#empezar {
+   margin-bottom: 30px;
+   padding: 10px;
+   font-size: 20px;
+   box-shadow: 0 0 10px #88ff00;
+   animation: empezar linear 0.8s infinite;
+}
+
+#informacion {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.coheteContainer {
+    color: black;
+    margin: 20px;
+    background-image: linear-gradient(#ff5100, #ffc400);
+    border: 10px #ff7b00 outset;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.coheteTitulo {
+    border-bottom: 2px black solid;
+    padding: 10px;
+}
+
+.controlContainer {
+    margin: 20px 10px 20px 10px;
+}
+
+.controlContainer > button {
+    border: 0;
+    margin: 10px;
+    padding: 10px;
+    width: 150px;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.controlContainer > h6 {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0 0 20px rgb(255, 217, 0);
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.acelerar {
+    background-color: #4a9951;
+    box-shadow: 0 0 20px #88ff00;
+}
+
+.acelerar:hover {
+    background-color: #3e8643;
+}
+
+.frenar {
+    background-color: #d85e5e;
+    box-shadow: 0 0 20px #ff3300;
+}
+
+.frenar:hover {
+    background-color: #a83636;
+}
+
+.potenciaActual {
+    margin-top: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.puntos {
+    z-index: 1000;
+    position: absolute;
+    color: #ffc400;
+    background-color: rgba(0, 0, 0, 0.781);
+    padding: 10px 30px;
+    box-shadow: 0px 0px 10px yellow;
+    border-radius: 20px;
+    font-family: 'Bungee Shade', cursive;
+    text-align: center;
+    opacity: 0;
+}
+
+.puntosTotal {
+    margin-top: 20px;
+    position: absolute;
+    top: 30px;
+    right: 10%;
+    width: 260px;
+}
+
+.puntosTotal p{
+    color: white;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 40px;
+    border: 2px dashed #ffc400;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.objetivo {
+    display: flex;
+    justify-content: center;
+}
+
+#objetivo {
+    color: white;
+    width: 400px;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    background-color: orangered;
+    box-shadow: 1px 1px 10px orangered;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#btn-again {
+    font-size: 40px;
+}
+
+#btn-again:hover {
+    cursor: pointer;
+}
+
+.rocket {
+    font-size: 80px;
+    margin-bottom: 30px;
+}
+
+
+@keyframes empezar {
+    0% {
+        box-shadow: 0 0 10px #88ff00;
+    }
+    50% {
+        box-shadow: 0 0 0px #88ff00;
+    }
+    100%{
+        box-shadow: 0 0 10px #88ff00;
+    }
+}
+
+@keyframes titulo {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes formulario {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes formulario2 {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes habilitado {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }    
+}
+
+@keyframes puntos {
+    0% {
+        opacity: 0;
+        font-size: 0px;
+        left: 48%;
+        top: 48%;
+    }
+    50% {
+        opacity: 1;
+        font-size: 50px;
+        left: 45%;
+        top: 45%;
+    }    
+    100% {
+        opacity: 0;
+        font-size: 150px;
+        left: 40%;
+        top: 40%;
+    }
+}
+
+@keyframes completado {
+    0% {
+        box-shadow: 0 0 50px orangered;
+    }
+    50% {
+        box-shadow: 0 0 0px orangered;
+    }
+    100%{
+        box-shadow: 0 0 50px orangered;
+    }
+    
+}
+
+@keyframes rocket {
+    0% {
+        transform: rotate(-40deg);
+    }
+    25% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(-50deg);
+    }
+    75% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(-40deg);
+    }
+}
+
+@media (max-width: 1200px) {
+    .puntosTotal {
+        position: static;
+        margin-bottom: 50px;
+        width: 260px;
+    }
+}
